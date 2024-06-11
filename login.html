@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> javascript functions </title>
+        <style>
+             #video-background{
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        </style>
+        <body text="white"></body>
+    
+    <script>
+        function LoginValidation(){
+            var uname = document.myform.username.value;
+            var password = document.myform.password.value;
+            if(uname==null || uname=="")
+            {
+                alert("Name cant be black")
+                return false;
+            }
+            else if(password.length<6)
+            {
+                alert("Password must be 6 letters")
+                return false;
+            }
+            return true;
+            
+        }
+        
+
+    </script>
+    </head>
+    <body>
+        <video autoplay muted loop id="video-background">
+            <source src="video1.mp4">
+        </video>
+        <center>
+        <h2> Login Page </h2>
+        <form name="myform" action="registration.html" onsubmit="return LoginValidation(this)">
+        User Name: <input type="text" name="username" placeholder="username"> <br> <br>
+        Password : <input type="password" name="password" placeholder="password"> <br> <br>
+                <input type="submit" value="submit">
+        </form>
+        </center>
+    </body>
+</html>
